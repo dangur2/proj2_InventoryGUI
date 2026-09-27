@@ -6,8 +6,8 @@ public class CreateUI extends JFrame{
     private final int gameWidth = 800;
     private final int gameHeight = 200;
 
-    public CreateUI(){
-        InventoryPanel ip = new InventoryPanel();
+    public CreateUI(Inventory inventory){
+        InventoryPanel ip = new InventoryPanel(inventory);
         setSize(gameWidth, gameHeight);
         setAlwaysOnTop(true);
         setDefaultCloseOperation(1);
