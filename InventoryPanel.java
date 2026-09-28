@@ -23,10 +23,11 @@ public class InventoryPanel extends JPanel{
     }
 
     private void add_buttons() {
-        for(int i = 0; i<inventory.getInventory().size(); i++){
+        for(int i = 1; i<inventory.getInventory().size(); i++){
             InventoryButton button = new InventoryButton(inventory.getInventorySlot(i), i);
             ib.add(button);
             button.setFocusable(true);
+            button.setFocusPainted(false);
             add(button);
         }
         addClickInput();
@@ -38,8 +39,8 @@ public class InventoryPanel extends JPanel{
                 @Override 
                 public void keyPressed(KeyEvent e){
                     int key = (e.getKeyCode() - KeyEvent.VK_0);
-                    showItemLabel(ib.get(key));
-                    hightlightItem(ib.get(key));
+                    showItemLabel(ib.get(key-1));
+                    hightlightItem(ib.get(key-1));
                 }
             });
         }

@@ -6,7 +6,7 @@ public class Inventory {
     public Inventory(ArrayList<Item> inventory){
         GenerateInventory gt = new GenerateInventory();
         this.inventory = inventory;
-        this.inventory.addAll(gt.generateItems(11));
+        this.inventory.addAll(gt.generateItems(10));
     }
 
     public ArrayList<Item> getInventory(){

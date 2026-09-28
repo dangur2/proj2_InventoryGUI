@@ -13,7 +13,7 @@ public class GenerateInventory {
     public ArrayList<Item> generateItems(int x){
         ArrayList<Item> generatedItems = new ArrayList<>();
         Random r = new Random();
-        for(int i = 1; i < x; i++){
+        for(int i = 0; i < x; i++){
             int randomItem = r.nextInt(0,allItems.size());
             Item item = allItems.get(randomItem);
             generatedItems.add(item);
