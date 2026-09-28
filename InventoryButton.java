@@ -4,23 +4,20 @@ import javax.swing.JButton;
 
 public class InventoryButton extends JButton{
     private final Item item;
-    public InventoryButton(Item item){
+    private final int slot;
+
+
+    public InventoryButton(Item item, int slot){
+        
         this.item = item;
+        this.slot = slot;
+
         setIcon(item.getIcon());
-        setForeground(Color.black);
-        setBackground(Color.white);
+        setOpaque(false);
         setFocusable(false);
-        // addClick();
-        // addKeyboardPress();
+        setBackground(Color.white);
     }
-
-    private void addKeyboardPress() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addKeyboardPress'");
-    }
-
-    private void addClick() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addClick'");
+    public int getSlot(){
+        return slot;
     }
 }

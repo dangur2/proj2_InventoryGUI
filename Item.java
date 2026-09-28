@@ -3,6 +3,7 @@ import javax.swing.ImageIcon;
 public class Item {
     private final String name;
     private final ImageIcon icon;
+    
 
     public Item(String name, String spritepath){
         this.name = name;
