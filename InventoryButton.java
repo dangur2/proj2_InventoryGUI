@@ -13,7 +13,6 @@ public class InventoryButton extends JButton{
         this.slot = slot;
 
         setIcon(item.getIcon());
-        setOpaque(false);
         setFocusable(false);
         setBackground(Color.white);
     }
